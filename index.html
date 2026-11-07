@@ -67,6 +67,9 @@
   .play svg { width: 26px; height: 26px; flex: none; }
   .play small { display: block; font-size: 12px; font-weight: 700; opacity: .72; line-height: 1.2; }
   .play b { display: block; line-height: 1.25; }
+  .dl-note { margin: 0; font-size: 13px; line-height: 1.5; opacity: .78; }
+  .dl-note a { color: inherit; }
+  .closing .dl-note { margin-top: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; color: rgba(255,255,255,.78); list-style: none; padding: 0; margin: 18px 0 0; }
   .facts li { display: inline-flex; align-items: center; gap: 6px; }
   .facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--trail); }
@@ -226,10 +229,11 @@
       <h1><span>걸어온 길이</span><br><span class="route">영상</span><span>이 됩니다</span></h1>
       <p class="lede">GPS로 기록한 산행을 위성지도 위에 그려 넣고, 사진은 찍은 자리에서 펼쳐 보여 줍니다. 버튼 몇 번이면 휴대폰 안에서 하이라이트 영상이 완성돼요.</p>
       <div class="cta-row">
-        <a class="play" href="https://play.google.com/store/apps/details?id=com.trailmemory.app" rel="noopener">
+        <a class="play" href="MyTrail.apk" download="MyTrail.apk" type="application/vnd.android.package-archive">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/></svg>
-          <span><small>무료 다운로드</small><b>Google Play에서 받기</b></span>
+          <span><small>무료 · 안드로이드</small><b>APK 바로 다운로드</b></span>
         </a>
+        <p class="dl-note">v1.0 · 약 17MB<br>Google Play 출시 준비 중</p>
       </div>
       <ul class="facts">
         <li>회원가입 없음</li>
@@ -410,6 +414,7 @@
       <span class="eyebrow">자주 묻는 질문</span>
       <h2>궁금한 점</h2>
       <div class="faq">
+        <details id="faq-install"><summary>APK는 어떻게 설치하나요?</summary><p>휴대폰에서 'APK 바로 다운로드'를 눌러 받은 MyTrail.apk를 열면 설치돼요. 처음이면 파일을 연 앱(Chrome, 내 파일 등)에 '출처를 알 수 없는 앱 설치'를 허용할지 묻는데, 허용하면 이어서 설치할 수 있어요. 아직 Google Play에 올라가지 않은 앱이라 Play 프로텍트가 확인 화면을 띄울 수도 있어요. 새 버전이 나오면 같은 방법으로 받아 설치하면 되고, 기록은 그대로 남아요.</p></details>
         <details><summary>정말 무료인가요?</summary><p>네. 다운로드와 모든 기능이 무료이고 광고도 없어요.</p></details>
         <details><summary>아이폰에서도 쓸 수 있나요?</summary><p>지금은 안드로이드 8.0 이상 휴대폰에서만 쓸 수 있어요.</p></details>
         <details><summary>기록 시작을 깜빡했어요.</summary><p>구글 지도에서 타임라인을 파일로 내보낸 뒤, New Trail의 '타임라인에서 경로 불러오기'로 열면 그날 걸은 구간을 Trail로 만들 수 있어요. 그 시간에 찍은 사진·동영상도 갤러리에서 찾아 함께 넣어 줘요.</p></details>
@@ -426,10 +431,11 @@
     <div class="wrap">
       <h2>다음 산행은<br>영상으로 남겨요</h2>
       <p>주말 산행 전에 미리 준비하세요~</p>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.trailmemory.app" rel="noopener">
+      <a class="play" href="MyTrail.apk" download="MyTrail.apk" type="application/vnd.android.package-archive">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/></svg>
-        <span><small>무료 다운로드</small><b>Google Play에서 받기</b></span>
+        <span><small>무료 · 안드로이드</small><b>APK 바로 다운로드</b></span>
       </a>
+      <p class="dl-note">설치 방법은 <a href="#faq-install" onclick="document.getElementById('faq-install').open = true">자주 묻는 질문</a>을 봐 주세요.</p>
     </div>
   </section>
 </main>
@@ -439,7 +445,7 @@
     <nav><a href="privacy.html">개인정보처리방침</a><a href="#faq">자주 묻는 질문</a></nav>
     <p>문의: pma2834@gmail.com</p>
     <p>화면 속 산행은 시연용 예시입니다. 위성지도 © Esri, Maxar, Earthstar Geographics · 지도 © OpenStreetMap contributors · 시연 사진 CC0</p>
-    <p>Google Play는 Google LLC의 상표입니다. © 2026 MyTrail</p>
+    <p>© 2026 MyTrail</p>
   </div>
 </footer>
 
